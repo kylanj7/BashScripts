@@ -1,4 +1,6 @@
 # Remove Ollama Installtion from Linux System
+sudo userdel -r ollama
+sudo groupdel -f ollama
 sudo systemctl stop ollama
 sudo systemctl disable ollama
 sudo rm /etc/systemd/system/ollama.service
