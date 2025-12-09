@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#run this in powershell after making edits to remove the windows new-lines: 
+#(Get-Content "config_client_node.sh" -Raw) -replace "`r`n", "`n" | Set-Content "config_client_node.sh" -NoNewline
+
 ENVIRONMENT=${1:-dev}
 INTERFACE=$(ls /sys/class/net/ | grep -v lo | head -1)
 USERNAME="admin"
