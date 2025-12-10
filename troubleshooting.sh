@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Monitor USB activity via command line
 
 udevadm monitor --udev --subsystem-match-usb
