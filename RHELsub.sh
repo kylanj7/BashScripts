@@ -12,7 +12,7 @@ read -p "Enter Client Activation Key: " KEY
 read -p  "Enter Server's Domain Name: " SERVER_DNS # Example: servername.location.company.com
 
 #REGISTER
-sudo subscription-manager register $KEY --org 19058927 $SERVER_DNS
+sudo subscription-manager register $KEY --org <org key> $SERVER_DNS
 sudo subscription-manager identity
 sudo subscription-manager status
 
