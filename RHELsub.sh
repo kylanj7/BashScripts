@@ -1,6 +1,12 @@
 # STEPS TO REGISTER RHEL: 
 
 # --------------------------------
+"""
+sudo su -
+usermod -aG wheel <username>
+
+"""
+# --------------------------------
 
 #VERIFY SUBSCRIPTION MANAGER PROXY
 sudo subscription-manager  config
