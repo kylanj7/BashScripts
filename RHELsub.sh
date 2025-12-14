@@ -10,9 +10,10 @@ sudo subscription-manager  config --server.proxy_hostname=proxy-location.company
 
 read -p "Enter Client Activation Key: " KEY
 read -p  "Enter Server's Domain Name: " SERVER_DNS # Example: servername.location.company.com
+read -p "Enter Organization Key: " ORG_KEY
 
 #REGISTER
-sudo subscription-manager register $KEY --org <org key> $SERVER_DNS
+sudo subscription-manager register $KEY --org $ORG_KEY $SERVER_DNS
 sudo subscription-manager identity
 sudo subscription-manager status
 
