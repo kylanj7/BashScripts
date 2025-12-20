@@ -4,9 +4,17 @@
 
 read -p "Enter Envoronment Name: " VENV_DIR
 
-sudo apt update
-sudo apt install python3.10-env
-
+if command -v apt &> /dev/null; then
+    echo "Ubuntu/Debian detected..."
+    sudo apt update
+    sudo apt install -y python3.10-venv 
+elif command -v dnf &> /dev/null || command -v yum &> /dev/null; then
+    echo "RHEL/CentOS/Fedora detected..."
+    sudo dnf install -y python3.11 # Python 3.10 is NOT in standard RHEL 9 repos. Must use 3.9, 3.12 ...
+else
+    echo "Unknown package manager."
+    exit 1
+fi
 # ---Make Python env & install requirements---
 echo "Creating Python virtual environment..."
 if [ ! -d "$VENV_DIR" ]; then
