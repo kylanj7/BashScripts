@@ -12,7 +12,7 @@ elif command -v dnf &> /dev/null; then
     sudo dnf install -y python$PY_VER
 elif command -v yum &> /dev/null; then
     echo "RHEL detected..."
-    sudo yum install -y python$PY_VER # RHEL repos do not contain Python 3.10, must use 3.9, 3.12 ...
+    sudo yum install -y python$PY_VER 
 else
     echo "Unknown package manager."
     exit 1
