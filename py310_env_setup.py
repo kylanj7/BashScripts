@@ -1,18 +1,18 @@
 #!/bin/bash
-
-# =--Enter the Name of your Virtual Environment--=
-read -p "Enter Envoronment Name: " VENV_DIR
+# =--Enter the Name of your Virtual Environment & Python Version--=
+read -p "Enter Environment Name: " VENV_DIR
+read -p "Enter Python Version (Number only ex 3.9, 3.10 ...): " PY_VER
 # =--Search for the Ideal Package Manager--= 
 if command -v apt &> /dev/null; then
     echo "Ubuntu/Debian detected..."
     sudo apt update
-    sudo apt install -y python3.10-venv 
+    sudo apt install -y python$PY_VER-venv 
 elif command -v dnf &> /dev/null; then
     echo "Fedora detected..."
-    sudo dnf install -y python3.10
+    sudo dnf install -y python$PY_VER
 elif command -v yum &> /dev/null; then
     echo "RHEL detected..."
-    sudo yum install -y python3.11 # RHEL repos do not contain Pyhton 3.10, must use 3.9, 3.12 ...
+    sudo yum install -y python$PY_VER # RHEL repos do not contain Python 3.10, must use 3.9, 3.12 ...
 else
     echo "Unknown package manager."
     exit 1
