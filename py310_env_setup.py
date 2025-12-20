@@ -1,5 +1,7 @@
 #!/bin/bash
-
+"""
+Must run as "source" not "./"
+"""
 # Automatic setup of Python Virtual Environment
 
 read -p "Enter Envoronment Name: " VENV_DIR
