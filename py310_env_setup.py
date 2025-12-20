@@ -13,7 +13,7 @@ elif command -v dnf &> /dev/null; then
     sudo dnf install -y python3.10
 elif command -v yum &> /dev/null; then
     echo "RHEL detected..."
-    sudo yum install -y python3.11 # RHEL repos do not contain Pyhton 3.10, must manually install or revert to 3.11
+    sudo yum install -y python3.11 # RHEL repos do not contain Pyhton 3.10, must use 3.9, 3.12 ...
 else
     echo "Unknown package manager."
     exit 1
