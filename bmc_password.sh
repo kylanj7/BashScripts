@@ -2,7 +2,7 @@
 
 #sed -i 's/\r$//' BMC_Password.sh
 
-USERNAME="admin"
+read -p "Enter Username: " USERNAME
 
 sudo ipmitool user list 1
 read -p "Press Enter to continue"
