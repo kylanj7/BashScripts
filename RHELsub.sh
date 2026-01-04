@@ -3,11 +3,12 @@
 # STEPS TO REGISTER RHEL: 
 
 # --------------------------------
-"""
-sudo su -
-usermod -aG wheel <username>
 
-"""
+# Add user to wheelhouse first
+
+# sudo su -
+# usermod -aG wheel <username>
+
 # --------------------------------
 
 #VERIFY SUBSCRIPTION MANAGER PROXY
