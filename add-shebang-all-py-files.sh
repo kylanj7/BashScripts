@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Pipeline Description:
 # 'find .' - This searching the current directory with "." representing the current directory
 # '-name *.py' - Find all files that match the pattern *.py (all Python files)
