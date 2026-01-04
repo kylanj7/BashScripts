@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # STEPS TO REGISTER RHEL: 
 
 # --------------------------------
