@@ -8,7 +8,7 @@ sudo dnf install steam -y
 
 read -p "Run Steam? (y/n) " RUN
 
-if [[ "$RUN" == "y" ]]; then
+if [[ "$RUN" == "y" || "$RUN" == "Y" ]]; then
     
     steam
 else
